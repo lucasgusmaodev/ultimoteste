@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Escolas</title>
+
+<style>
+
+/* VARIÁVEIS (IGUAL AO SITE PRINCIPAL) */
+:root {
+    --bg-main: #ffffff;
+    --bg-soft: #f7f7f7;
+    --card-bg: #ffffff;
+
+    --primary: #ff7a18;
+    --primary-hover: #e56710;
+
+    --text-main: #1a1a1a;
+    --text-soft: #555;
+    --text-muted: #888;
+
+    --border: #e5e5e5;
+}
+
+/* GERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+    background:var(--bg-main);
+    color:var(--text-main);
+    line-height:1.6;
+}
+
+/* HEADER (PADRÃO) */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--border);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    color:var(--primary);
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+nav a{
+    color:var(--text-soft);
+    text-decoration:none;
+    margin-left:20px;
+    font-size:13px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* TÍTULO (ESTILO SEÇÃO) */
+.titulo{
+    text-align:center;
+    padding:80px 8% 40px;
+}
+
+.titulo h1{
+    font-size:32px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.titulo h1::after{
+    content:'';
+    width:50px;
+    height:3px;
+    background:var(--primary);
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.titulo p{
+    color:var(--text-soft);
+    margin-top:20px;
+}
+
+/* GRID */
+.grid{
+    padding:40px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD (IGUAL AO LUGARES) */
+.card{
+    background:var(--card-bg);
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FOTO */
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTEÚDO */
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:var(--text-soft);
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+/* BOTÕES (PADRÃO) */
+.buttons{
+    margin-top:12px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:#fff;
+    padding:8px 14px;
+    margin-right:8px;
+    margin-top:5px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:var(--primary-hover);
+}
+
+.btn-map{
+    background:#eee;
+    color:var(--text-main);
+}
+
+.btn-map:hover{
+    background:#ddd;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:50px;
+    background:#f2f2f2;
+    border-top:1px solid var(--border);
+    margin-top:50px;
+    color:var(--text-muted);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">Escolas</div>
+
+<nav>
+
+<a href="index.html">Início</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="titulo">
+
+<h1>Escolas</h1>
+
+<p>Algumas opções de escolas e universidades para estudar.</p>
+
+</section>
+
+
+
+<section class="grid">
+
+
+
+<!-- RESTAURANTE 1 -->
+
+<div class="card">
+
+<img src="cei.webp">
+
+<div class="card-content">
+
+<h3>CEI</h3>
+
+<p>Rod. Augusto Montenegro, 650 - Agulha, Belém - PA.</p>
+
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Col%C3%A9gio+CEI/@-1.2999441,-48.4750086,17z/data=!3m1!4b1!4m6!3m5!1s0x92a48b01f0239287:0xae1ce46633b514bd!8m2!3d-1.2999495!4d-48.4724337!16s%2Fg%2F1tf5fv1g?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 2 -->
+
+<div class="card">
+
+<img src="interativo.jpeg">
+
+<div class="card-content">
+
+<h3>Interativo</h3>
+
+<p>Rua Dr - R. Manoel Barata, 1510 - Icoaraci, Belém - PA.</p>
+
+<p>(91) 988425662</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Col%C3%A9gio+Interativo+-+Unidade+de+Icoaraci/@-1.3080206,-48.4898419,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4656ce3b7d039:0xbd5eccc4de93d19e!8m2!3d-1.308026!4d-48.487267!16s%2Fg%2F11rkc31kyg?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 3 -->
+
+<div class="card">
+
+<img src="adventista.png">
+
+<div class="card-content">
+
+<h3>Adventista</h3>
+
+<p>R. Manoel Barata, 296 - Centro, Belém - PA.</p>
+
+<p>(91) 33466270</p>
+
+<div class="buttons">
+
+<a href="https://icoaraci.educacaoadventista.org.br/" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Escola+Adventista+de+Icoaraci/@-1.2971455,-48.4907613,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4158d4d1975f9:0x4008615303ad210e!8m2!3d-1.2971509!4d-48.4881864!16s%2Fg%2F1tdrgfpn?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 2 -->
+
+<div class="card">
+
+<img src="sesi.webp">
+
+<div class="card-content">
+
+<h3>SESI</h3>
+
+<p>R. Quinze de Agosto, 1435 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 40094344</p>
+
+<div class="buttons">
+
+<a href="https://www.sesipa.org.br/" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Escola+SESI+Icoaraci/@-1.306144,-48.4855788,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4641f4ba72473:0x63468d9a8b0c2d14!8m2!3d-1.3061494!4d-48.4830039!16s%2Fg%2F1td14bl1?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="cna.jpeg">
+
+<div class="card-content">
+
+<h3>CNA</h3>
+
+<p>Av. Dr. Lopo de Castro, 735 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 984675776</p>
+
+<div class="buttons">
+
+<a href="https://cna.com.br/belem-icoaraci" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/CNA+Bel%C3%A9m+-+Icoaraci/@-1.2981043,-48.4856453,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465ce5a258ef7:0x9b0df9a7f734e22d!8m2!3d-1.2981097!4d-48.4830704!16s%2Fg%2F11j0jqb4hy?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="lourdes.webp">
+
+<div class="card-content">
+
+<h3>Nossa Senhora de Lourdes</h3>
+
+<p>R. Padre Júlio Maria, 810 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 32270371</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Col%C3%A9gio+Nossa+Senhora+de+Lourdes/@-1.3008205,-48.4885428,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4641ba13a3c4d:0x62f2acea83af9639!8m2!3d-1.3008259!4d-48.4859679!16s%2Fg%2F1tk23_p1?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="bibiquinha.jpeg">
+
+<div class="card-content">
+
+<h3>Bibiquinha</h3>
+
+<p>Rod. Augusto Montenegro, n° 150 - km 13 - Agulha, Belém - PA.</p>
+
+<p>(91) 980499336</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Bibiquinha+Escola+Integrada/@-1.303846,-48.4683304,17z/data=!3m1!4b1!4m6!3m5!1s0x92a467186e773257:0x3bf4116477efcac5!8m2!3d-1.3038514!4d-48.4657555!16s%2Fg%2F11t58nlqs7?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="eduardomuller.jpg">
+
+<div class="card-content">
+
+<h3>Eduardo Müller</h3>
+
+<p>Av. Dr. Lopo de Castro, 899 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 32274363</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Escola+Crist%C3%A3+Eduardo+Miller/@-1.297857,-48.4839949,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46421c9310393:0x382c3d09e1010126!8m2!3d-1.2978624!4d-48.48142!16s%2Fg%2F1tqnmq4w?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="interativo.jpeg">
+
+<div class="card-content">
+
+<h3>UNIP</h3>
+
+<p>R. Manoel Barata, 1510 - Ponta Grossa, Belém - PA.</p>
+
+<p>(91) 996131020</p>
+
+<div class="buttons">
+
+<a href="https://www.unip.br/" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Unip+Icoaraci/@-1.3080696,-48.4898004,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465d943e7a2d7:0xac816d42da630f2c!8m2!3d-1.308075!4d-48.4872255!16s%2Fg%2F11lhdm6bhm?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="">
+
+<div class="card-content">
+
+<h3>Estácio</h3>
+
+<p>Em breve</p>
+
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Icoaraci. Desenvolvido pela GemCode AI.</p>
+
+</footer>
+
+
+
+</body>
+</html>

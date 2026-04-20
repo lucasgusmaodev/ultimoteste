@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Praças e Lazer</title>
+
+<style>
+
+/* VARIÁVEIS (IGUAL AO SITE PRINCIPAL) */
+:root {
+    --bg-main: #ffffff;
+    --bg-soft: #f7f7f7;
+    --card-bg: #ffffff;
+
+    --primary: #ff7a18;
+    --primary-hover: #e56710;
+
+    --text-main: #1a1a1a;
+    --text-soft: #555;
+    --text-muted: #888;
+
+    --border: #e5e5e5;
+}
+
+/* GERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+    background:var(--bg-main);
+    color:var(--text-main);
+    line-height:1.6;
+}
+
+/* HEADER (PADRÃO) */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--border);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    color:var(--primary);
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+nav a{
+    color:var(--text-soft);
+    text-decoration:none;
+    margin-left:20px;
+    font-size:13px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* TÍTULO (ESTILO SEÇÃO) */
+.titulo{
+    text-align:center;
+    padding:80px 8% 40px;
+}
+
+.titulo h1{
+    font-size:32px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.titulo h1::after{
+    content:'';
+    width:50px;
+    height:3px;
+    background:var(--primary);
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.titulo p{
+    color:var(--text-soft);
+    margin-top:20px;
+}
+
+/* GRID */
+.grid{
+    padding:40px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD (IGUAL AO LUGARES) */
+.card{
+    background:var(--card-bg);
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FOTO */
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTEÚDO */
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:var(--text-soft);
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+/* BOTÕES (PADRÃO) */
+.buttons{
+    margin-top:12px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:#fff;
+    padding:8px 14px;
+    margin-right:8px;
+    margin-top:5px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:var(--primary-hover);
+}
+
+.btn-map{
+    background:#eee;
+    color:var(--text-main);
+}
+
+.btn-map:hover{
+    background:#ddd;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:50px;
+    background:#f2f2f2;
+    border-top:1px solid var(--border);
+    margin-top:50px;
+    color:var(--text-muted);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">Icoaraci</div>
+
+<nav>
+
+<a href="index.html">Início</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="titulo">
+
+<h1>Praças e Lazer</h1>
+
+<p>Alguns lugares para visitar.</p>
+
+</section>
+
+
+
+<section class="grid">
+
+
+
+<!-- RESTAURANTE 1 -->
+
+<div class="card">
+
+<img src="orla-de-icoaraci.jpeg">
+
+<div class="card-content">
+
+<h3>Orla de Icoaraci</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Orla+de+Icoaraci/@-1.2948968,-48.4925392,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4654a5f0d50b3:0xae218454266aa98f!8m2!3d-1.2949022!4d-48.4899643!16s%2Fg%2F11lrf3xsc1?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="chale.jpeg">
+
+<div class="card-content">
+
+<h3>Chalé Vitória Boutique Hotel</h3>
+
+<p>Tv. do Cruzeiro, 306 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Chal%C3%A9+Vit%C3%B3ria+Hotel+Boutique/@-1.2942514,-48.4898258,17z/data=!3m1!4b1!4m9!3m8!1s0x92a465003052af59:0x2d71e50bc0ab8f69!5m2!4m1!1i2!8m2!3d-1.2942568!4d-48.4872509!16s%2Fg%2F11mkzx2z7b?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="container.jpeg">
+
+<div class="card-content">
+
+<h3>Shopping Container</h3>
+
+<p>R. Padre Júlio Maria, 341 - Icoaraci - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/ShoppingContainerIcoaraci/@-1.2967201,-48.4879727,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465358633cf19:0x4b39463fe325d6ba!8m2!3d-1.2967255!4d-48.4853978!16s%2Fg%2F11yzbmcnj9?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="igreja-praca-matriz.jpeg">
+
+<div class="card-content">
+
+<h3>Praça Matriz</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Pra%C3%A7a+Matriz+de+Icoaraci/@-1.3016683,-48.4877598,17z/data=!3m1!4b1!4m6!3m5!1s0x92a464191253e28b:0x85e3a6bef35cf130!8m2!3d-1.3016737!4d-48.4851849!16s%2Fg%2F11crxr95j2?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 2 -->
+
+<div class="card">
+
+<img src="mouracarvalho.webp">
+
+<div class="card-content">
+
+<h3>Praça Moura Carvalho</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 3 -->
+
+<div class="card">
+
+<img src="igreja-praca-matriz.jpeg">
+
+<div class="card-content">
+
+<h3>Praça São Sebastião</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="arenapark.jpeg">
+
+<div class="card-content">
+
+<h3>Arena Park</h3>
+
+<p>Tv. Pimenta Bueno - Cruzeiro, Belém - PA.</p>
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Arena+Park+Bel%C3%A9m/@-1.2963943,-48.4911272,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465a6f1a1d7fd:0x6015cf688aed7198!8m2!3d-1.2963997!4d-48.4885523!16s%2Fg%2F11kgpf2ghz?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 2 -->
+
+<div class="card">
+
+<img src="p2soccer.jpeg">
+
+<div class="card-content">
+
+<h3>Arena P2 soccer</h3>
+
+<p>Rod. Augusto Montenegro, 798 - Campina de Icoaraci, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Arena+P2+Soccer/@-1.3004584,-48.4738262,17z/data=!3m1!4b1!4m6!3m5!1s0x92a467ed798f682b:0x1e17670bbbaeda17!8m2!3d-1.3004638!4d-48.4712513!16s%2Fg%2F11fnry5rz1?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 3 -->
+
+<div class="card">
+
+<img src="arenalumar.jpg">
+
+<div class="card-content">
+
+<h3>Arena Lumar Society</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="showdebola.png">
+
+<div class="card-content">
+
+<h3>Arena Show de Bola</h3>
+
+<p>R. Dois de Dezembro, 1480 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Arena+Show+De+Bola+(ICOARACI)/@-1.3033152,-48.4803229,17z/data=!3m1!4b1!4m6!3m5!1s0x92a467007dcea2d7:0x33cbf30955b5e99c!8m2!3d-1.3033206!4d-48.477748!16s%2Fg%2F11xrqhc3hv?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="sest.webp">
+
+<div class="card-content">
+
+<h3>SEST SENAT</h3>
+
+<p>Rod. Augusto Montenegro, 765 - Águas Negras, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Sest+Senat/@-1.3044667,-48.4658608,17z/data=!3m1!4b1!4m6!3m5!1s0x92a48afe1bc17b99:0xb3836f60a7442ce!8m2!3d-1.3044721!4d-48.4632859!16s%2Fg%2F1vh_9ftg?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="pousada.jpg">
+
+<div class="card-content">
+
+<h3>Pousada do Sol</h3>
+
+<p>Rod. Augusto Montenegro, 1867 - Águas Negras, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Pousada+do+Sol/@-1.3111971,-48.4599238,17z/data=!3m1!4b1!4m9!3m8!1s0x92a48af9777ed9f5:0x366cb1cf00831bf4!5m2!4m1!1i2!8m2!3d-1.3112025!4d-48.4573489!16s%2Fg%2F1yfj8t7b8?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="sorriso.jpg">
+
+<div class="card-content">
+
+<h3>Hotel Sorriso</h3>
+
+<p>Tv. do Cruzeiro, 988 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Hotel+Icoaraci/@-1.2923884,-48.4842127,17z/data=!3m1!4b1!4m9!3m8!1s0x92a4642647a4f621:0x1446dd39149be0c8!5m2!4m1!1i2!8m2!3d-1.2923938!4d-48.4816378!16s%2Fg%2F11c60j4qp1?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="curupere.jpeg">
+
+<div class="card-content">
+
+<h3>Balneário Curuperé</h3>
+
+<p>R. do Amor, 10 - São João do Outeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Balneario+Curuper%C3%A9/@-1.2728002,-48.4746192,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4674ea0b3f13d:0x47d93693faf345f2!8m2!3d-1.2728056!4d-48.4720443!16s%2Fg%2F11gj74vrm8?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="paraisodosreis.jpeg">
+
+<div class="card-content">
+
+<h3>Balneário Paraíso dos Reis</h3>
+
+<p>Escola Bosque - Rua Manoel Barata, 632, próximo a - São João do Outeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Balne%C3%A1rio+Para%C3%ADso+dos+Reis/@-1.2640516,-48.4667929,17z/data=!3m1!4b1!4m6!3m5!1s0x92a467297bc7b67f:0xb2b859858c692578!8m2!3d-1.264057!4d-48.464218!16s%2Fg%2F11fsm3k8s6?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="deise.webp">
+
+<div class="card-content">
+
+<h3>Balneário da Deise</h3>
+
+<p>Tv. Álvaro Freitas, 4 - Brasília, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Balne%C3%A1rio+da+Deise/@-1.2836638,-48.4778285,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4678f41c81fd3:0x5dc0983a08ce104f!8m2!3d-1.2836692!4d-48.4752536!16s%2Fg%2F11k66r6xn3?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="bicadogaucho.jpeg">
+
+<div class="card-content">
+
+<h3>Balneário Bica do Gaúcho</h3>
+
+<p>R. da Piçarrera, 5 - Água Boa, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Balne%C3%A1rio+bica+do+ga%C3%BAcho/@-1.2456844,-48.4524299,17z/data=!4m16!1m9!3m8!1s0x92a469003d5dac85:0xf001b2c48c94c63d!2sBalne%C3%A1rio+bica+do+ga%C3%BAcho!8m2!3d-1.2456898!4d-48.449855!9m1!1b1!16s%2Fg%2F11yq1zp4xb!3m5!1s0x92a469003d5dac85:0xf001b2c48c94c63d!8m2!3d-1.2456898!4d-48.449855!16s%2Fg%2F11yq1zp4xb?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="careca.webp">
+
+<div class="card-content">
+
+<h3>Balneário do Careca</h3>
+
+<p>R. Ômega, 31 - Fama, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Balne%C3%A1rio+do+Careca/@-1.2466761,-48.4496946,17z/data=!3m1!4b1!4m6!3m5!1s0x92a469db017e9ccb:0x9a544c4921539d1e!8m2!3d-1.2466815!4d-48.4471197!16s%2Fg%2F11sw1gjdv0?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="cacimba.webp">
+
+<div class="card-content">
+
+<h3>Cacimba do Tiago</h3>
+
+<p>Tv. dos Andradas, 503 - Ponta Grossa, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Cacimba+do+Tiago+%7C+Restaurante+Clube/@-1.3085975,-48.4863574,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465003151f43d:0x9791f3f8ba582c84!8m2!3d-1.3086029!4d-48.4837825!16s%2Fg%2F11tjp3hq4l?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="aqua.webp">
+
+<div class="card-content">
+
+<h3>Aqua Marina</h3>
+
+<p>R. da Fab, s/n - Outeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/AQUA+MARINA/@-1.2623495,-48.4311256,17z/data=!3m1!4b1!4m6!3m5!1s0x92a467cf7f6f3e6f:0xe7146517f6a78a30!8m2!3d-1.2623549!4d-48.4285507!16s%2Fg%2F11bv19hjy3?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="praiagrande.jpeg">
+
+<div class="card-content">
+
+<h3>Praia Grande</h3>
+
+<p>São João do Outeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Praia+Grande/@-1.2563757,-48.4709203,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46729d5e162af:0xa01fd17b568f7e55!8m2!3d-1.2563811!4d-48.4683454!16s%2Fg%2F11ptsqvq14?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="praiadoamor.jpeg">
+
+<div class="card-content">
+
+<h3>Praia do Amor</h3>
+
+<p>Alameda Enock Pinto, 48 - São João do Outeiro (Outeiro), Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Praia+do+Amor/@-1.2520215,-48.4643378,17z/data=!3m1!4b1!4m6!3m5!1s0x92a468a172ca9f25:0x57c58ec4a3337347!8m2!3d-1.2520269!4d-48.4617629!16s%2Fg%2F11cmsn58zw?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="beloparaiso.jpeg">
+
+<div class="card-content">
+
+<h3>Praia do Belo Paraíso</h3>
+
+<p>Unnamed Rd - Água Boa, Belém - PA</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Praia+do+Belo+Para%C3%ADso/@-1.2430857,-48.4556161,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46893efbbac13:0xd11483515f93e4b!8m2!3d-1.2430911!4d-48.4530412!16s%2Fg%2F11bwylshk6?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="praiadobarrobranco.jpeg">
+
+<div class="card-content">
+
+<h3>Praia do Barro Branco</h3>
+
+<p>Água Boa, Belém - PA</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Praia+do+Barro+Branco/@-1.2463001,-48.45886,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46897a088f5cb:0x314aec5b06bc22!8m2!3d-1.2463055!4d-48.4562851!16s%2Fg%2F11f4pkxyz9?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="praiabrasilia.jpeg">
+
+<div class="card-content">
+
+<h3>Praia da Brasília</h3>
+
+<p>Brasília, Belém - PA</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Praia+da+Bras%C3%ADlia/@-1.2736627,-48.48433,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46500643d613d:0x7d8a25ae9e33bb4a!8m2!3d-1.2736681!4d-48.4817551!16s%2Fg%2F11yyl6p13r?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="praia-do-cruzeiro.jpeg">
+
+<div class="card-content">
+
+<h3>Praia do Cruzeiro</h3>
+
+<p>Tv. do Cruzeiro, 463-645 - Cruzeiro, Belém - PA.</p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Praia+do+Cruzeiro/@-1.2934774,-48.4961733,15z/data=!3m1!4b1!4m6!3m5!1s0x92a46425b1c7c339:0xdf2892960669a271!8m2!3d-1.2934989!4d-48.4858735!16s%2Fg%2F11c5bp9fyd?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Icoaraci. Desenvolvido pela GemCode AI.</p>
+
+</footer>
+
+
+
+</body>
+</html>

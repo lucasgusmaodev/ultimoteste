@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icoaraci | Vila Sorriso</title>
+
+    <style>
+
+/* VARIÁVEIS */
+:root {
+    --bg-main: #ffffff;
+    --bg-soft: #f7f7f7;
+    --card-bg: #ffffff;
+
+    --primary: #ff7a18;
+    --primary-hover: #e56710;
+
+    --text-main: #1a1a1a;
+    --text-soft: #555;
+    --text-muted: #888;
+
+    --border: #e5e5e5;
+}
+
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--primary);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-soft);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* HERO */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+        url("vistaaerea.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 60px);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* SEÇÕES */
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+section {
+    background: #ffffff;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: var(--primary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SOBRE */
+.sobre-texto {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    color: var(--text-soft);
+}
+
+/* GALERIA */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.foto-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px;
+    background: #eee;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.foto-item:hover img {
+    transform: scale(1.08);
+}
+
+.foto-credito {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 11px;
+    padding: 5px 10px;
+    text-align: right;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.foto-item:hover .foto-credito {
+    transform: translateY(0);
+}
+
+/* LUGARES */
+.lugares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.lugar-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.lugar-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.lugar-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.lugar-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.lugar-info h3 {
+    color: var(--primary);
+}
+
+.lugar-info p {
+    color: var(--text-soft);
+    font-size: 14px;
+}
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+}
+
+/* GRIDS */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-category {
+    text-align: left;
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.menu-category:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.menu-category h3 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.menu-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.item-price {
+    color: var(--primary);
+}
+
+.item-description {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.address-info {
+    display: block;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* MAPA */
+.mapa-box {
+    width: 100%;
+    height: 400px;
+    background: #eee;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* FOOTER */
+footer {
+    padding: 50px;
+    background: #f2f2f2;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+    nav ul { display: none; }
+    section { padding: 60px 5%; }
+    .foto-credito { transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">Icoaraci</a>
+        <nav>
+            <ul>
+                <li><a href="#sobre">História</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#lugares">Lugares</a></li>
+                <li><a href="#utilidade">Utilidade Pública</a></li>
+                <li><a href="#horarios">Transportes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>A História</h2>
+        <p class="sobre-texto">
+            De Fazenda Pinheiro à Vila Sorriso. Icoaraci é o coração do artesanato paraense e o refúgio perfeito para quem busca o melhor pôr do sol da Amazônia.
+        </p>
+        <a href="historia-detalhada.html" class="btn">Ler história completa</a>
+    </section>
+
+    <section id="galeria">
+        <h2>Galeria</h2>
+        <div class="galeria-grid">
+            <div class="foto-item">
+                <img src="orla-de-icoaraci.jpeg" alt="Orla de Icoaraci">
+                <div class="foto-credito">Foto: Acervo Municipal</div>
+            </div>
+            <div class="foto-item">
+                <img src="82cde91e-4151-45be-9a5a-fe03ae78fa10.jpg" alt="Icoaraci">
+                <div class="foto-credito">Foto: @seu_usuario_aqui</div>
+            </div>
+            <div class="foto-item">
+                <img src="espaco-artesanato.jpeg" alt="Artesanato">
+                <div class="foto-credito">Foto: Agência Pará</div>
+            </div>
+            <div class="foto-item">
+                <img src="igreja-praca-matriz.jpeg" alt="Igreja Matriz">
+                <div class="foto-credito">Foto: Colaborador Local</div>
+            </div>
+            <div class="foto-item">
+                <img src="barco-por-do-sol.jpeg" alt="Pôr do sol">
+                <div class="foto-credito">Foto: @descubra_icoaraci</div>
+            </div>
+            <div class="foto-item">
+                <img src="fim-do-dia.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="vista.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="casarao-antigo.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="praiavistodecima.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="praia-do-cruzeiro.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="pessoas-jogando-volei.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="pessoascaminhando.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="barco-ave.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="barco-antigo-abandonado.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="pessoas-jogando-volei03.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+            <div class="foto-item">
+                <img src="pessoas-jogando-volei02.jpeg" alt="Augusto Montenegro">
+                <div class="foto-credito">Foto: Domínio Público</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lugares">
+        <h2>Explorar Lugares</h2>
+        <div class="lugares-grid">
+            <div class="lugar-card">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de" alt="Restaurantes">
+                <div class="lugar-info">
+                    <h3>Gastronomia</h3>
+                    <p>O melhor da gastronomia paraense: do peixe com açaí à tapioquinha da orla.</p>
+                    <a href="restaurantes.html" class="btn">Ver Opções</a>
+                </div>
+            </div>
+            <div class="lugar-card">
+                <img src="Central-Park.jpg" alt="Praças">
+                <div class="lugar-info">
+                    <h3>Praças e Lazer</h3>
+                    <p>Conheça a Praça da Matriz e os espaços públicos para toda a família.</p>
+                    <a href="lazer.html" class="btn">Explorar</a>
+                </div>
+            </div>
+            <div class="lugar-card">
+                <img src="escola.webp" alt="Escolas">
+                <div class="lugar-info">
+                    <h3>Educação</h3>
+                    <p>Guia de instituições de ensino públicas e privadas no distrito.</p>
+                    <a href="escolas.html" class="btn">Ver Opções</a>
+                </div>
+            </div>
+            <div class="lugar-card">
+                <img src="skyfit.jpeg" alt="Artesanato">
+                <div class="lugar-info">
+                    <h3>Bem-estar</h3>
+                    <p>Mantenha-se ativo: guia de academias, centros esportivos e crossfit.</p>
+                    <a href="bem-estar.html" class="btn">Ver Opções</a>
+                </div>
+            </div>
+            <div class="lugar-card">
+                <img src="pauloazevedo.jpg" alt="Artesanato">
+                <div class="lugar-info">
+                    <h3>Saúde</h3>
+                    <p>Mantenha-se ativo: guia de academias, centros esportivos e crossfit.</p>
+                    <a href="saude.html" class="btn">Ver Opções</a>
+                </div>
+            </div>
+            <div class="lugar-card">
+                <img src="lider.webp" alt="Artesanato">
+                <div class="lugar-info">
+                    <h3>Supermercados</h3>
+                    <p>Mantenha-se ativo: guia de academias, centros esportivos e crossfit.</p>
+                    <a href="supermercados.html" class="btn">Ver Opções</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="utilidade">
+        <h2>Utilidade Pública</h2>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Saúde e Emergência</h3>
+                <div class="menu-item">
+                    <div class="item-header"><span>Hospital Abelardo Santos</span></div>
+                    <p class="item-description">Hospital Regional / Alta Complexidade.</p>
+                    <span class="address-info">📍 Av. Augusto Montenegro, Km 13</span>
+                    <span class="address-info">📞 <strong>(91) 3199-9860 / 3108-6060</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>UPA de Icoaraci</span></div>
+                    <p class="item-description">Pronto Atendimento 24 horas.</p>
+                    <span class="address-info">📍 Rua L-09, s/n - Campina</span>
+                    <span class="address-info">📞 <strong>(91) 3247-8321</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Postão da Saúde</span></div>
+                    <p class="item-description">Unidade de Saúde de Icoaraci.</p>
+                    <span class="address-info">📍 Rua Manoel Barata, 840</span>
+                    <span class="address-info">📞 <strong>(91) 3227-1550</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Pronto Socorro Dr. Roberto Macedo</span></div>
+                    <p class="item-description">Exemplo de atendimento odontológico.</p>
+                    <span class="address-info">📍 Av. Lopo de Castro, 1298</span>
+                    <span class="address-info">📞 <strong>(91) 3352-5112</strong></span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Segurança e Cidadania</h3>
+                <div class="menu-item">
+                    <div class="item-header"><span>10º BPM (Polícia Militar)</span></div>
+                    <p class="item-description">Policiamento na Vila Sorriso.</p>
+                    <span class="address-info">📍 Orla do Cruzeiro, 68</span>
+                    <span class="address-info">📞 <strong>(91) 98425-0029 (Linha Direta)</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>8ª Seccional de Icoaraci</span></div>
+                    <p class="item-description">Polícia Civil / Boletins de Ocorrência.</p>
+                    <span class="address-info">📍 Rua Padre Júlio Maria, 1143</span>
+                    <span class="address-info">📞 <strong>(91) 3283-7430</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Corpo de Bombeiros (26º GBM)</span></div>
+                    <p class="item-description">Resgate e Combate a Incêndios.</p>
+                    <span class="address-info">📍 Rod. Arthur Bernardes, s/n</span>
+                    <span class="address-info">📞 <strong>193 (Emergência)</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Agência Distrital (ADIC)</span></div>
+                    <p class="item-description">Administração Local e Serviços.</p>
+                    <span class="address-info">📍 Rua Manoel Barata, s/n</span>
+                    <span class="address-info">📞 <strong>(91) 3227-2673</strong></span>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Usina da Paz</span></div>
+                    <p class="item-description">Administração Local e Serviços.</p>
+                    <span class="address-info">📍 Rua Manoel Barata, s/n</span>
+                    <span class="address-info">📞 <strong>(91) 3227-2673</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horarios">
+        <h2>Transportes</h2>
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Ônibus (Principais Linhas)</h3>
+                <div class="menu-item">
+                    <div class="item-header"><span>Icoaraci - Ver-o-Peso</span><span class="item-price">R$ 4,00</span></div>
+                    <p class="item-description">Esta segue pela Rodovia Arthur Bernardes, passando pelo Tapanã e Pratinha até chegar ao centro comercial.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Icoaraci - Almirante Barroso</span><span class="item-price">R$ 4,00</span></div>
+                    <p class="item-description">Conexão direta com o terminal BRT.</p>
+                </div> 
+                <div class="menu-item">
+                    <div class="item-header"><span>Icoaraci - Centro (Presidente Vargas)</span><span class="item-price">R$ 4,00</span></div>
+                    <p class="item-description">Ela não vai pela Almirante Barroso, mas sim pela Av. Centenário e Av. Pedro Álvares Cabral, sendo uma ótima opção para chegar rápido ao Shopping Bosque Grão-Pará ou à Doca/Presidente Vargas.</p>
+                </div> 
+                <div class="menu-item">
+                    <div class="item-header"><span>Icoaraci - São Brás</span><span class="item-price">R$ 4,00</span></div>
+                    <p class="item-description">Linha clássica que atende quem precisa descer na área do Terminal Rodoviário de Belém ou seguir para a Almirante Barroso sem necessariamente ir até o fim da linha no Ver-o-Peso.</p>
+                </div>   
+            </div>
+
+            <div class="menu-category">
+                <h3>Balsas e Barcos</h3>
+                <div class="menu-item">
+                    <div class="item-header"><span>Travessia Marajó (Camará)</span><span class="item-price">R$ 25 - 108</span></div>
+                    <p class="item-description">Saídas diárias para passageiros e veículos.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header"><span>Ilha de Cotijuba</span><span class="item-price">R$ 4 - 10</span></div>
+                    <p class="item-description">Barcos regulares saindo do trapiche municipal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Localização</h2>
+        <p>📍 Distrito de Icoaraci - Belém, Pará</p>
+        <div class="mapa-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15954.672620760443!2d-48.4840897!3d-1.3033857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a486a2e2df5f6b%3A0x6d5e054593b7b7f7!2sIcoaraci%2C%20Bel%C3%A9m%20-%20PA!5e0!3m2!1spt-BR!2sbr!4v1710000000000" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Icoaraci. Desenvolvido pela GemCode AI.</p>
+    </footer>
+
+</body>
+</html>
