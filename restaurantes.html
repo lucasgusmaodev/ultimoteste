@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gastronomia</title>
+
+<style>
+
+/* VARIÁVEIS (IGUAL AO SITE PRINCIPAL) */
+:root {
+    --bg-main: #ffffff;
+    --bg-soft: #f7f7f7;
+    --card-bg: #ffffff;
+
+    --primary: #ff7a18;
+    --primary-hover: #e56710;
+
+    --text-main: #1a1a1a;
+    --text-soft: #555;
+    --text-muted: #888;
+
+    --border: #e5e5e5;
+}
+
+/* GERAL */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+body{
+    background:var(--bg-main);
+    color:var(--text-main);
+    line-height:1.6;
+}
+
+/* HEADER (PADRÃO) */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--border);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    color:var(--primary);
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+nav a{
+    color:var(--text-soft);
+    text-decoration:none;
+    margin-left:20px;
+    font-size:13px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* TÍTULO (ESTILO SEÇÃO) */
+.titulo{
+    text-align:center;
+    padding:80px 8% 40px;
+}
+
+.titulo h1{
+    font-size:32px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.titulo h1::after{
+    content:'';
+    width:50px;
+    height:3px;
+    background:var(--primary);
+    position:absolute;
+    bottom:-10px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.titulo p{
+    color:var(--text-soft);
+    margin-top:20px;
+}
+
+/* GRID */
+.grid{
+    padding:40px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD (IGUAL AO LUGARES) */
+.card{
+    background:var(--card-bg);
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid var(--border);
+    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FOTO */
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+/* CONTEÚDO */
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:var(--text-soft);
+    font-size:14px;
+    margin-bottom:6px;
+}
+
+/* BOTÕES (PADRÃO) */
+.buttons{
+    margin-top:12px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:#fff;
+    padding:8px 14px;
+    margin-right:8px;
+    margin-top:5px;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:13px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:var(--primary-hover);
+}
+
+.btn-map{
+    background:#eee;
+    color:var(--text-main);
+}
+
+.btn-map:hover{
+    background:#ddd;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:50px;
+    background:#f2f2f2;
+    border-top:1px solid var(--border);
+    margin-top:50px;
+    color:var(--text-muted);
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<div class="logo">Icoaraci</div>
+
+<nav>
+
+<a href="index.html">Início</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="titulo">
+
+<h1>Restaurantes, cafeterias, pizzarias, bares e sorveteria</h1>
+
+<p>Algumas opções de lugares para comer.</p>
+
+</section>
+
+
+
+<section class="grid">
+
+
+
+<!-- RESTAURANTE 1 -->
+
+<div class="card">
+
+<img src="mrbrasa.jpeg">
+
+<div class="card-content">
+
+<h3>Mr. Brasa Gastronomia</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Mr.+Brasa+Icoaraci/@-1.2945782,-48.4909102,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46424b16e9f6b:0x517a752b5a5e8fee!8m2!3d-1.2945836!4d-48.4883353!16s%2Fg%2F11cknpp5c9?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 2 -->
+
+<div class="card">
+
+<img src="orla-cafe.jpg">
+
+<div class="card-content">
+
+<h3>Orla Coffee</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 3 -->
+
+<div class="card">
+
+<img src="uba.jpeg">
+
+<div class="card-content">
+
+<h3>Ubá Gastronomia</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Ub%C3%A1+gastron%C3%B4mia/@-1.2969589,-48.4922777,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465e5ffa8ae1d:0x59c55f8084a29192!8m2!3d-1.2969643!4d-48.4897028!16s%2Fg%2F11q49fqs1l?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="buriti.jpg">
+
+<div class="card-content">
+
+<h3>Buriti Gastronomia</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Buriti+Gastronomia/@-1.2967327,-48.4919817,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465dec8fcbd59:0xabdd31aa5d45d867!8m2!3d-1.2967381!4d-48.4894068!16s%2Fg%2F11v0ryxmp9?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 2 -->
+
+<div class="card">
+
+<img src="villaprime.webp">
+
+<div class="card-content">
+
+<h3>Restô da Villa Prime</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Rest%C3%B4+da+Villa+Prime/@-1.3000306,-48.4920001,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46512ee217cd5:0x8950a617d280c62!8m2!3d-1.300036!4d-48.4894252!16s%2Fg%2F11q1qs8v0b?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- RESTAURANTE 3 -->
+
+<div class="card">
+
+<img src="sapucaia.webp">
+
+<div class="card-content">
+
+<h3>Sapucaia</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com/maps/place/Sapucaia+Restaurante+e+Pizza/@-1.2964749,-48.4912725,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465609b8d89fb:0xb8a1d93dc6a6d135!8m2!3d-1.2964803!4d-48.4886976!16s%2Fg%2F11srswvszx?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="boxgrill.webp">
+
+<div class="card-content">
+
+<h3>Box Grill</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Box+Grill/@-1.2997671,-48.4775676,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4670f99be58f1:0xc8fc30d59f393ff6!8m2!3d-1.2997725!4d-48.4749927!16s%2Fg%2F11hdqvw448?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="tetto.webp">
+
+<div class="card-content">
+
+<h3>Tetto</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Restaurante+Tetto/@-1.2980679,-48.492115,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4643d46b09201:0x9677fc89596305fa!8m2!3d-1.2980733!4d-48.4895401!16s%2Fg%2F11bxb9r75x?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="cotton.jpeg">
+
+<div class="card-content">
+
+<h3>Cotton Club</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Cotton+Club+Icoaraci/@-1.3002575,-48.4880106,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46418e507e48d:0x18254bac0a81e57f!8m2!3d-1.3002629!4d-48.4854357!16s%2Fg%2F1v3_3rvw?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="clube.jpg">
+
+<div class="card-content">
+
+<h3>Clube do espeto</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Clube+do+Espeto/@-1.3023346,-48.4839287,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4641e80884593:0x5d866cf0e9e33242!8m2!3d-1.30234!4d-48.4813538!16s%2Fg%2F119v9qz5g?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="manga.webp">
+
+<div class="card-content">
+
+<h3>Manga Itália</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Manga+It%C3%A1lia+%7C+Restaurante/@-1.3045833,-48.4860968,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4651e54919209:0xde0701c64fd3e50a!8m2!3d-1.3045887!4d-48.4835219!16s%2Fg%2F11t9qmtvq2?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="tapi.webp">
+
+<div class="card-content">
+
+<h3>Tapiocaria Regional</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Tapiocaria+Regional+(Icoaraci)/@-1.3046427,-48.4860507,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4642265f3e0b1:0x57f3bff3800b58c6!8m2!3d-1.3046481!4d-48.4834758!16s%2Fg%2F11dxl96dlp?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="cantinho.webp">
+
+<div class="card-content">
+
+<h3>Cantinho da Tapioca</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Cantinho+da+tapioca/@-1.2940444,-48.4899732,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465f9aea5d94b:0x188ec64f7868d1c5!8m2!3d-1.2940498!4d-48.4873983!16s%2Fg%2F11jllbnvgn?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="porao-italia.jpeg">
+
+<div class="card-content">
+
+<h3>Porão Itália</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Pizzaria+Por%C3%A3o+It%C3%A1lia/@-1.2967015,-48.4915769,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4643ccda42afb:0x63ff5243016f17bd!8m2!3d-1.2967069!4d-48.489002!16s%2Fg%2F11cr_dvtmd?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="paidegua.webp">
+
+<div class="card-content">
+
+<h3>Pai d'égua</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Pizzaria+Villa+Pai+D'%C3%89gua/@-1.2983214,-48.4851468,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4658fde1645f1:0x301902fe46973469!8m2!3d-1.2983268!4d-48.4825719!16s%2Fg%2F11svdgrm76?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="mag.jpg">
+
+<div class="card-content">
+
+<h3>Mag pizzas</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Mag+Pizzas+Icoaraci/@-1.2980612,-48.4818084,17z/data=!3m1!4b1!4m6!3m5!1s0x92a466b767e2c0b7:0x5cb1b44a4700e158!8m2!3d-1.2980666!4d-48.4792335!16s%2Fg%2F11fy4dzprf?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="kass-pizza.jpeg">
+
+<div class="card-content">
+
+<h3>Kass pizza</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Kas+Pizza+Icoaraci/@-1.2967492,-48.4913813,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4650047c40baf:0xe1699b83ef89fead!8m2!3d-1.2967546!4d-48.4888064!16s%2Fg%2F11yd2jk_nj?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="clubedapizza.jpg">
+
+<div class="card-content">
+
+<h3>Clube da pizza</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Clube+Da+Pizza/@-1.3022757,-48.6251854,12z/data=!3m1!5s0x92a4641e7ef27291:0x1a4f561c815e86b!4m10!1m2!2m1!1sClube+da+pizza!3m6!1s0x92a4641e7eb054c5:0xa686d0f21a5ea7ba!8m2!3d-1.3022757!4d-48.4809898!15sCg5DbHViZSBkYSBwaXp6YVoQIg5jbHViZSBkYSBwaXp6YZIBEHBpenphX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F11gg63fqsw?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="chale-da-vila.jpeg">
+
+<div class="card-content">
+
+<h3>Chalé da Vila</h3>
+
+<p>Tv. Pimenta Bueno, 205 - ponto A - Cruzeiro, Belém - PA</p>
+
+<p>(91) 96666-6666</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Chal%C3%A9+da+Vila/@-1.2963964,-48.4915192,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4650049f54a8d:0x904d02282e091fe0!8m2!3d-1.2964018!4d-48.4889443!16s%2Fg%2F11zjg6p39y?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="paidegua.webp">
+
+<div class="card-content">
+
+<h3>Pizza do Dr</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Orla+Cont%C3%AAiner/@-1.3000584,-48.4923035,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4650022076709:0x7f2f10da9ce294d9!8m2!3d-1.3000638!4d-48.4897286!16s%2Fg%2F11ylxspy_f?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="artezzano.jpeg">
+
+<div class="card-content">
+
+<h3>Artezzano Forneria</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Artezzano+Pizzaria+Artezanal/@-1.3000316,-48.5000284,15z/data=!4m10!1m2!2m1!1sartezzano+forneria+icoaraci!3m6!1s0x92a465000e323041:0x86e9a8d809b9a846!8m2!3d-1.3043207!4d-48.4831403!15sChthcnRlenphbm8gZm9ybmVyaWEgaWNvYXJhY2mSARBwaXp6YV9yZXN0YXVyYW504AEA!16s%2Fg%2F11y_ql86h9?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="napanela.jpeg">
+
+<div class="card-content">
+
+<h3>Na panela</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Restaurante+Na+Panela+de+Barro/@-1.297835,-48.4922114,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465ca064d37f9:0x16efdc0c7a544076!8m2!3d-1.2978404!4d-48.4896365!16s%2Fg%2F11rzhft0zq?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="cecilia.jpg">
+
+<div class="card-content">
+
+<h3>Cecília Doceria</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Cec%C3%ADlia+-+Doceria+%26+Cafeteria/@-1.2982362,-48.4921768,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4650075347d57:0xd9b8ed3534bba102!8m2!3d-1.2982416!4d-48.4896019!16s%2Fg%2F11x2544jg6?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="maioca.jpg">
+
+<div class="card-content">
+
+<h3>Maioca</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Maioca+-+Sorveteria+Artesanal+Icoaraci/@-1.2981318,-48.4920441,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4652e79217867:0x8494415fe148e826!8m2!3d-1.2981372!4d-48.4894692!16s%2Fg%2F11x8zncb6r?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="churrascariaorla.jpg">
+
+<div class="card-content">
+
+<h3>Churrascaria da Orla</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Churrascaria+da+orla/@-1.2976466,-48.4920741,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46575426ce6fb:0x26c12de170c28e65!8m2!3d-1.297652!4d-48.4894992!16s%2Fg%2F11wc55trwj?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="kisabor.jpg">
+
+<div class="card-content">
+
+<h3>KI Sabor</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/KI+SABOR/@-1.2999499,-48.4749623,17z/data=!3m1!4b1!4m6!3m5!1s0x92a466a247cf9b7d:0xabb47da70f006d16!8m2!3d-1.2999553!4d-48.4723874!16s%2Fg%2F11l2_9psy4?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="natelha.jpg">
+
+<div class="card-content">
+
+<h3>Na Telha</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Restaurante+Na+telhA/@-1.2973434,-48.5255866,14z/data=!4m10!1m2!2m1!1sna+telha+icoaraci!3m6!1s0x92a46559638fc11f:0xd55eebeca1993800!8m2!3d-1.2973434!4d-48.4895377!15sChFuYSB0ZWxoYSBpY29hcmFjaVoTIhFuYSB0ZWxoYSBpY29hcmFjaZIBFGJyYXppbGlhbl9yZXN0YXVyYW504AEA!16s%2Fg%2F11y_zlq3h2?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="restaurantecruzeiro.jpg">
+
+<div class="card-content">
+
+<h3>Cruzeiro</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Restaurante+Cruzeiro/@-1.2951222,-48.4922426,17z/data=!3m1!4b1!4m6!3m5!1s0x92a465b5c8c2c28d:0x6ea8078a5c961047!8m2!3d-1.2951276!4d-48.4896677!16s%2Fg%2F11rc4c6430?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="maia.webp">
+
+<div class="card-content">
+
+<h3>Maia</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Restaurante+Maia/@-1.2941066,-48.4895649,17z/data=!3m1!4b1!4m6!3m5!1s0x92a46424ec4a4f67:0xbe329fd386f433f6!8m2!3d-1.294112!4d-48.48699!16s%2Fg%2F11c6dxr77f?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="raizes.jpg">
+
+<div class="card-content">
+
+<h3>Raízes</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://maps.google.com" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="parceiros.webp">
+
+<div class="card-content">
+
+<h3>Parceiro's</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Restaurante+Parceiro's+-+Tijuca/@-1.2981609,-48.4921793,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4643d44010a89:0x2be53189a915f38d!8m2!3d-1.2981663!4d-48.4896044!16s%2Fg%2F11b6v94kct?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="mr-mix.jpg">
+
+<div class="card-content">
+
+<h3>Mr. Mix</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Mr.+Mix+Milk+Shake+-+Bel%C3%A9m+(Icoaraci+Orla)/@-1.2979262,-48.4921922,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4658f8e8d23a7:0x9e6461a4001064ca!8m2!3d-1.2979316!4d-48.4896173!16s%2Fg%2F11q2sk_rss?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="campeao.webp">
+
+<div class="card-content">
+
+<h3>Delícias da Vila</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Del%C3%ADcias+da+Vila/@-1.2978015,-48.4824709,17z/data=!3m1!4b1!4m6!3m5!1s0x92a4642014e95239:0x59e3cf830fc9c75!8m2!3d-1.2978069!4d-48.479896!16s%2Fg%2F11c0xrj3l_?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="taiko.jpg">
+
+<div class="card-content">
+
+<h3>Taiko Sushi</h3>
+
+<p></p>
+
+<p>(91) 9</p>
+
+<div class="buttons">
+
+<a href="https://www.google.com" target="_blank" class="btn">
+Saiba mais
+</a>
+
+<a href="https://www.google.com/maps/place/Taiko+Sushi/@-1.2981352,-48.4829087,17z/data=!3m1!4b1!4m6!3m5!1s0x92a464203bedda17:0x274ecae394f82d5c!8m2!3d-1.2981406!4d-48.4803338!16s%2Fg%2F11fyz_wmdb?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-map">
+Ver no mapa
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+<footer>
+
+<p>© 2026 Icoaraci. Desenvolvido pela GemCode AI.</p>
+
+</footer>
+
+
+
+</body>
+</html>
